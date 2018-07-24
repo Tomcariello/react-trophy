@@ -14,6 +14,9 @@ router.get('/', function(req, res, next) {
   }, {
     id: 2,
     username: "User02"
+  }, {
+    id: 3,
+    username: "User03"
   }])
 });
 
