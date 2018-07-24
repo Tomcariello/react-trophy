@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Customers from './components/customers/customers'
+import Activities from './components/activities/activities'
 
 class App extends Component {
   state = {users: []}
@@ -13,7 +13,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React!</h1>
         </header>
-        <Customers />
+        <Activities />
       </div>
     );
   }

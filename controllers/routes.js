@@ -12,12 +12,10 @@ app.get('/api/customers', (req, res) => {
     res.json(customers);
 });
 
+//Actual API to the database to gather the trophies
 app.get('/api/trophy', (req, res) => {
-  //get data from trophy table
-  models.Trophy.findAll({}) //order: 'id  DESC'
+  models.Activities.findAll({})
   .then(function(data) {
-    var payload = {dynamicData: data}
-
-    res.json(payload);
+    res.json(data);
   })
 });
