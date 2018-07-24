@@ -10,7 +10,7 @@ var Sequelize = require('sequelize'),
 if (process.env.JAWSDB_URL){
   connection = new Sequelize(process.env.JAWSDB_URL);
 } else{
-  connection = new Sequelize('tomcariello', 'root', 'password', {
+  connection = new Sequelize('trophy', 'root', 'password', {
     host: 'localhost',
     dialect: 'mysql',
     port:'3306'
@@ -24,5 +24,5 @@ var routes = require('./controllers/routes.js');
 const port = 3001;
 
 //Start the server
-app.listen(port, () => console.log('server stareted on ' + port));
+app.listen(port, () => console.log('server started on ' + port));
 

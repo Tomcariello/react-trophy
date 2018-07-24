@@ -1,3 +1,6 @@
+var models = require('../models');
+var sequelizeConnection = models.sequelize;
+
 //Create dummy API route with data to pass to react server
 app.get('/api/customers', (req, res) => {
     const customers = [
@@ -7,4 +10,14 @@ app.get('/api/customers', (req, res) => {
         {id: 4, firstName: "Jimbo", lastName: "Jones"},
     ];
     res.json(customers);
+});
+
+app.get('/api/trophy', (req, res) => {
+  //get data from trophy table
+  models.Trophy.findAll({}) //order: 'id  DESC'
+  .then(function(data) {
+    var payload = {dynamicData: data}
+
+    res.json(payload);
+  })
 });
